@@ -26,6 +26,9 @@
       <p>ตอบ 10 คำถามสั้น ๆ เกี่ยวกับชีวิตประจำวัน แล้วเราจะบอกว่าคุณเหมาะกับหนังแนวไหนที่สุด พร้อมรายชื่อหนังให้ไปดูต่อ</p>
       <a class="btn" href="#quiz" id="heroStart">เริ่มเลย</a>
     </div>
+    <div class="hero-image">
+      <img src="assets/cinema.svg" alt="ภาพประกอบจอภาพยนตร์" width="500" height="400">
+    </div>
   </section>
 
   <section id="how" class="band">
@@ -40,7 +43,7 @@
   <section id="quiz" class="quiz-wrap" aria-live="polite">
     <div class="ticket" id="startScreen">
       <h2>ตั๋วเข้าชมของคุณ</h2>
-      <p>นั่งให้สบาย แล้วกดปุ่มด้านล่างเมื่อพร้อมเริ่มเล่น</p>
+      <p> กดปุ่มด้านล่างเมื่อพร้อมเริ่มเล่นแล้ว </p>
       <button class="btn" id="startBtn">รับตั๋วและเริ่มเล่น</button>
     </div>
 
@@ -51,10 +54,13 @@
       </div>
       <h2 id="questionText"></h2>
       <div class="answers" id="answers"></div>
+      <div class="quiz-buttons">
+        <button class="back-button" id="backButton" type="button">← ย้อนกลับ</button>
+        <button class="btn" id="nextButton" type="button">ข้อต่อไป →</button>
+      </div>
     </div>
 
     <div class="ticket result" id="resultScreen" hidden>
-      <div class="emoji" id="rEmoji"></div>
       <p class="small">แนวหนังของคุณคือ</p>
       <h2 id="rName"></h2>
       <p id="rDesc"></p>
