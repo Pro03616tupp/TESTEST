@@ -1,5 +1,4 @@
-/* สีและรูปแบบหลักของเว็บไซต์ */
-* { box-sizing: border-box; }
+* { box-sizing: border-box; } /* สีและรูปแบบหลักของเว็บไซต์ */
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -15,9 +14,8 @@ img { max-width: 100%; }
 [hidden] { display: none !important; }
 section { scroll-margin-top: 80px; }
 
-/* เมนูด้านบน */
-.nav {
-  position: sticky;
+.nav { 
+  position: sticky; /* เมนูด้านบน */
   top: 0;
   z-index: 10;
   display: flex;
@@ -59,16 +57,14 @@ section { scroll-margin-top: 80px; }
 .btn:hover { background: #ffad93; }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
 
-/* วิธีเล่น */
-.band { padding: 70px 8%; background: #fffaf2; color: #111827; }
+.band { padding: 70px 8%; background: #fffaf2; color: #111827; } /* ส่วนวิธีเล่น */
 .band h2 { font-size: 34px; margin: 0 0 25px; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; list-style: none; padding: 0; margin: 0; }
 .steps li { padding: 25px; background: white; border: 1px solid #eadfd2; border-radius: 12px; }
 .steps strong { display: block; margin-bottom: 8px; font-size: 19px; }
 .steps span { color: #5c6678; }
 
-/* กล่องแบบทดสอบ */
-.quiz-wrap { max-width: 900px; margin: auto; padding: 80px 24px; }
+.quiz-wrap { max-width: 900px; margin: auto; padding: 80px 24px; } /* กล่องแบบทดสอบ */
 .ticket { padding: 35px; background: #fffaf2; color: #111827; border-radius: 14px; }
 .ticket h2 { font-size: 28px; margin: 0 0 15px; }
 .ticket p { color: #566174; }
@@ -97,8 +93,7 @@ section { scroll-margin-top: 80px; }
 .back-button:hover { background: #f1f5f9; }
 .back-button:disabled { opacity: .5; cursor: not-allowed; }
 
-/* ผลลัพธ์และแนวหนัง */
-.result h2 { color: #e76553; }
+.result h2 { color: #e76553; } /* ผลลัพธ์และแนวหนัง */
 .result .small { font-size: 14px; }
 .scores { margin: 25px 0; }
 .score-row { display: flex; align-items: center; gap: 10px; margin: 10px 0; font-size: 14px; }
@@ -113,8 +108,7 @@ section { scroll-margin-top: 80px; }
 .genre-card p { color: #d3dbe8; font-size: 14px; margin: 0; }
 footer { padding: 25px; text-align: center; color: #b8c1d1; font-size: 13px; }
 
-/* ปรับให้ใช้งานง่ายบนมือถือ */
-@media (max-width: 700px) {
+@media (max-width: 700px) {  /* ปรับให้ใช้งานง่ายบนมือถือ */
   .nav { padding: 12px 18px; }
   .menu-btn { display: block; }
   .nav nav { display: none; position: absolute; top: 59px; left: 0; right: 0; padding: 15px 18px; background: #111827; flex-direction: column; gap: 12px; }

@@ -1,5 +1,4 @@
-// ข้อมูลแนวหนัง: ชื่อไทย, ชื่ออังกฤษ, คำอธิบาย, หนังแนะนำ
-const genres = [
+const genres = [  // ข้อมูลของแนวหนัง
   ["โรแมนติก", "Romantic", "หนังเกี่ยวกับความรักและความสัมพันธ์", "About Time, Pride & Prejudice"],
   ["ตลก", "Comedy", "หนังสนุกที่ทำให้หัวเราะและผ่อนคลาย", "Home Alone, The Hangover"],
   ["สยองขวัญ", "Horror", "หนังลึกลับและน่ากลัวที่ทำให้ลุ้น", "A Quiet Place, The Conjuring"],
@@ -7,8 +6,7 @@ const genres = [
   ["แอนิเมชัน", "Animation", "หนังการ์ตูนสีสันสดใสและสร้างสรรค์", "Inside Out, Spirited Away"]
 ];
 
-// คำตอบลำดับเดียวกันในทุกข้อจะตรงกับแนวหนังลำดับเดียวกันด้านบน
-const questions = [
+const questions = [  // คำตอบลำดับเดียวกันในทุกข้อจะตรงกับแนวหนังลำดับเดียวกันด้านบน
   { title: "สีไหนที่คุณชอบที่สุด?", type: "color", choices: ["ชมพู", "เหลือง", "ดำ", "แดงไวน์", "ส้มสดใส"] },
   { title: "ฉากแบบไหนที่คุณชอบที่สุด?", choices: ["คู่รักใต้แสงดาว", "กลุ่มเพื่อนหัวเราะ", "บ้านลึกลับยามค่ำ", "ดอกไม้ใต้แสงเทียน", "โลกภาพวาดสีสด"] },
   { title: "ถ้าได้ไปต่างโลก คุณอยากไปที่ไหน?", choices: ["เมืองแห่งความรัก", "เมืองที่ทุกคนชอบเล่นมุก", "บ้านผีสิง", "งานเลี้ยงหน้ากาก", "โลกการ์ตูน"] },
@@ -54,7 +52,7 @@ function showQuestion() {
 function showResult() {
   const scores = Array(genres.length).fill(0);
   answers.forEach(answer => scores[answer]++); // คำตอบหนึ่งข้อ = หนึ่งคะแนน
-  let winner = answers[answers.length - 1]; // ถ้าคะแนนเสมอกัน ใช้คำตอบข้อสุดท้าย
+  let winner = answers[answers.length - 1]; // ถ้าคะแนนเสมอกัน ใช้คำตอบข้อสุดท้าย (เอาง่ายๆ คือ ตัดสินที่ คำตอบท้าย)
   scores.forEach((score, i) => { if (score > scores[winner]) winner = i; });
 
   $("rName").textContent = `${genres[winner][0]} (${genres[winner][1]})`;
@@ -78,8 +76,7 @@ $("nextButton").onclick = () => {
   else showResult();
 };
 
-// เมนูมือถือ
-$("menuBtn").onclick = () => {
+$("menuBtn").onclick = () => {    // เมนูมือถือ อาจไม่จำแต่โจทย์มันเขียนไว้
   $("menu").classList.toggle("show");
   $("menuBtn").setAttribute("aria-expanded", $("menu").classList.contains("show"));
 };
